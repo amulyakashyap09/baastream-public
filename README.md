@@ -79,120 +79,128 @@ BaaStream is an infrastructure and log scanning tool designed to help healthcare
 | **Encryption** | 4 rules | Infrastructure & Logs | End-to-end encryption, key management, algorithm compliance |
 | **Data Redaction** | 4 rules | Infrastructure & Logs | PHI redaction, anonymization, log sanitization, access control |
 
-## 💰 Pricing & Plans
+## 💰 Plans & Pricing
 
-BaaStream offers CLI access with monthly risk assessment reports across five tiers:
+BaaStream offers CLI access with monthly risk assessment reports across six tiers using a **hybrid user-based + scan-based pricing model**:
 
-### 🆓 Community Plan - Free
-**Perfect for individual developers and personal projects**
+| Tier                      | Price       | Users | Scans / Month | Rules | Plugins      | Custom Rules | Support                      | Extras                                                            |
+| ------------------------- | ----------- | ----- | ------------- | ----- | ------------ | ------------ | ---------------------------- | ----------------------------------------------------------------- |
+| **Community**             | **\$0**     | 1     | 50            | 10    | –            | –            | Community / Discord          | –                                                                 |
+| **Starter**               | **\$99**    | 5     | 300           | 25    | –            | –            | Community / Discord          | –                                                                 |
+| **Professional**          | **\$149**   | 10    | 750           | 50    | Any 1 plugin | 3 / month    | Priority (24–48h, Email)     | –                                                                 |
+| **Growth**                | **\$299**   | 15    | 1,200         | 75    | Any 2 plugins| 5 / month    | Priority (24h, Email)        | Advanced analytics                                               |
+| **Business**              | **\$699**   | 25    | 2,500         | 75    | All plugins  | 10 / month   | Priority (24h, Email + Call) | Early upgrade access                                              |
+| **Enterprise**            | **\$1,299** | 50    | 5,000         | 99+   | All plugins  | 25 / month   | Dedicated (Email + Call)     | Technical Training                                                |
+| **Healthcare Enterprise** | **\$2,499** | 100   | 10,000        | 99+   | All plugins  | 50 / month   | Dedicated (Email + Call)     | HIPAA/HITRUST templates, audit-ready exports, vendor risk reports |
 
-**CLI Features:**
-- 50 scans per month
-- 10 core security rules (HIPAA basics)
-- Personal use license only
-- Community support via Discord/Slack
+### 🆓 Community – Free
+**For individual developers & personal projects**
 
-**Monthly Reports:**
-- Basic risk score (0-100)
-- Top 3 technical risks
-- PDF format only
-- Email delivery
+- 1 User
+- 50 Scans / month
+- 10 core HIPAA rules
+- Text-only risk score & top 3 risks
+- Community support (Discord/Slack)
 
-**Value:** "Get started with healthcare compliance scanning"
+**Value**: Get started with healthcare compliance scanning
 
----
+### 🌱 Starter – $99/month
+**For early-stage startups & small teams**
 
-### 🚀 Startup Plan - $79/month
-**Perfect for healthcare startups and seed-stage companies**
+- Up to 5 Users
+- 300 Scans / month
+- 25 security rules (HIPAA + GDPR basics + API basics)
+- Commercial license
+- PDF outputs
+- Community support
 
-**CLI Features:**
-- 200 scans per month (4x Community)
-- 50 core security rules (HIPAA + GDPR + basic API security)
-- Commercial license included
+**Value**: Affordable compliance scanning for seed-stage companies
+
+### 🚀 Professional – $149/month
+**For growing healthcare startups**
+
+- Up to 10 Users
+- 750 Scans / month
+- 50 core rules (HIPAA, GDPR, API, Auth, Encryption, SOC2 Essentials)
+- Any 1 plugin integration
+- 3 custom rules / month
 - JSON + PDF output formats
-- Community support via Discord/Slack
+- Priority support (24-48h SLA)
 
-**Monthly Reports:**
-- Basic risk score (0-100)
-- Top 5 technical risks
-- Remediation recommendations
-- PDF format only
-- Email delivery
+**Value**: Essential compliance scanning for scaling startups
 
-**Value:** "Essential compliance scanning for growing healthcare startups"
+### 💼 Growth – $299/month
+**For established dev/security teams**
 
----
+- Up to 15 Users
+- 1,200 Scans / month
+- 75 advanced rules (Complete HIPAA, SOC2, ISO, HITRUST, Cloud, Logs, Data Governance)
+- Any 2 plugin integrations
+- 5 custom rules / month
+- Advanced analytics & reports
+- Priority support (24h SLA)
 
-### 💼 Professional Plan - $149/month
-**Perfect for established healthcare development teams**
+**Value**: Advanced compliance coverage with analytics & custom rules
 
-**CLI Features:**
-- 500 scans per month (2.5x Startup)
-- All 150+ security rules (HIPAA, GDPR, SOC2, HITRUST, ISO 27001, FHIR, PCI-DSS)
-- Advanced log scanning & analysis
-- Priority support (24-48 hour response)
-- Multiple output formats (JSON, CSV, PDF)
-- Risk readiness scoring
+### 🏢 Business – $699/month
+**For scaling healthcare companies**
 
-**Monthly Reports:**
-- Comprehensive risk analysis
-- Framework-specific scores (HIPAA, SOC2, etc.)
-- Trend analysis (month-over-month)
-- PDF + CSV formats
-- Detailed remediation steps
-- Priority support access
-
-**Value:** "Complete compliance coverage for established organizations"
-
----
-
-### 🏢 Enterprise Plan - $499/month
-**Perfect for scaling healthcare companies**
-
-**CLI Features:**
-- 2,500 scans per month (5x Professional)
-- All 150+ security rules + unlimited custom rules
-- 1 plugin included (GitHub Actions, Jenkins, or Terraform)
+- Up to 25 Users
+- 2,500 Scans / month
+- 75 advanced rules + all plugins
+- All plugin integrations (GitHub Actions, Jenkins, Terraform)
+- 10 custom rules / month
 - Team management features
-- Priority support (24-48 hour response)
-- Advanced analytics and insights
+- Priority support (24h SLA + Call)
+- Early access to new features
 
-**Monthly Reports:**
-- Enterprise-grade analysis
-- Custom framework scoring
-- Advanced analytics and insights
-- PDF + CSV + Executive Summary
-- Team reporting
-- Priority support access
+**Value**: Enterprise-grade security & collaboration with CI/CD integrations
 
-**Value:** "Enterprise-grade security with team collaboration"
+### 🏥 Enterprise – $1,299/month
+**For large healthcare organizations**
 
----
+- Up to 50 Users
+- 5,000 Scans / month
+- 99+ all framework rules
+- All plugin integrations
+- 25 custom rules / month
+- Dedicated support (Email + Call)
+- Technical training
+- Advanced analytics & insights
 
-### 🏥 Healthcare Enterprise Plan - $1,499/month
-**Perfect for large health systems and enterprises**
+**Value**: Dedicated compliance partnership with technical training
 
-**CLI Features:**
-- Unlimited scans per month
-- All 150+ security rules + unlimited custom rules
-- **All Plugin Architecture** (GitHub Actions, Jenkins, Terraform)
-- **Custom Rule Development Service**
-- Dedicated support (8-hour response, phone)
-- Technical training for CLI usage
-- Advanced analytics and insights
-- White-label reporting options
-- Multi-tenant architecture
+### 🏥 Healthcare Enterprise – $2,499/month
+**For large health systems & enterprises**
 
-**Monthly Reports:**
-- Enterprise-grade analysis
-- Custom framework scoring
-- Advanced analytics and insights
-- PDF + CSV + Executive Summary
-- White-label options
-- Dedicated support
-- Custom report formats
+- Up to 100 Users
+- 10,000 Scans / month
+- 99+ all framework rules
+- All plugin integrations
+- 50 custom rules / month
+- Dedicated support (Email + Call)
+- HIPAA/HITRUST templates
+- Audit-ready exports
+- Vendor risk reports
+- Technical training
 
-**Value:** "Enterprise-grade security with custom development and CI/CD integration"
+**Value**: White-glove compliance platform for health systems & enterprise-level orgs
+
+### 📊 Feature Comparison Table (Hybrid Model)
+
+| Feature | Community | Starter | Professional | Growth | Business | Enterprise | Healthcare Enterprise |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Base Price** | **$0** | **$99/month** | **$149/month** | **$299/month** | **$699/month** | **$1,299/month** | **$2,499/month** |
+| **Monthly Users (Included)** | 1 | 5 | 10 | 15 | 25 | 50 | 100 |
+| **Monthly Scans (Included)** | 50 | 300 | 750 | 1,200 | 2,500 | 5,000 | 10,000 |
+| **Additional User Cost** | N/A | **$25/user** | **$35/user** | **$40/user** | **$45/user** | **$50/user** | **$60/user** |
+| **Overage Scan Cost** | N/A | **$0.50/scan** | **$0.45/scan** | **$0.40/scan** | **$0.40/scan** | **$0.30/scan** | **$0.25/scan** |
+| **Security Rules** | 10 basic | 25 core | 50 core | 75 advanced | 75 advanced | 99+ all frameworks | 99+ all frameworks |
+| **Plugin Support** | ❌ | ❌ | ✅ **1 plugin** | ✅ **2 plugins** | ✅ **All plugins** | ✅ **All plugins** | ✅ **All plugins** |
+| **Custom Rules** | ❌ | ❌ | ✅ **3/month** | ✅ **5/month** | ✅ **10/month** | ✅ **25/month** | ✅ **50/month** |
+| **Support** | Community | Community | Priority (24-48h) | Priority (24h) | Priority (24h) + Call | Dedicated (Email + Call) | Dedicated (Email + Call) |
+| **Advanced Analytics** | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ |
+| **Technical Training** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
 
 ## 📰 Read more about rules: [Rule Catalog](./docs/RULES.md)
 
