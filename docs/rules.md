@@ -1,321 +1,364 @@
-# 📋 Complete Rule Catalog
+# 📋 BaaStream Rules Documentation
 
-## 🆓 Free Tier Rules (rules/free)
+**Complete Reference Guide for All 100+ Compliance Rules Across 15+ Frameworks**
 
-### Audit Logs (`audit_logs.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `AUDIT-001` | Audit Logs Enabled | High | API endpoints must have audit logging enabled with proper format validation |
-| `AUDIT-002` | Log Retention Period | Medium | Audit logs must be retained for minimum required period with automated cleanup |
-| `AUDIT-003` | Log Format Validation | Medium | Audit logs must include required fields with proper validation patterns |
+---
 
-### Unstructured Logs (`unstructured_logs.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `LOG-APACHE-001` | Apache Log Format Compliance | Medium | Apache logs must include required fields for compliance |
-| `LOG-CUSTOM-001` | Custom Log Format Compliance | Medium | Custom logs must include essential fields for compliance |
+## 🎯 **Overview**
 
-## 💎 Pro Tier Rules (rules/pro)
+BaaStream provides comprehensive compliance scanning with **100+ rules** across **15+ frameworks** covering healthcare, security, and global compliance requirements. This document provides a complete reference for all available rules, their categories, and descriptions.
 
-### GDPR Security (`gdpr.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `GDPR-001` | Data Minimization | High | Only collect necessary personal data |
-| `GDPR-002` | Consent Management | Critical | Implement proper consent mechanisms |
-| `GDPR-003` | Right to Erasure | High | Support data deletion requests |
-| `GDPR-004` | Data Portability | Medium | Enable data export functionality |
-| `GDPR-005` | Privacy by Design | High | Implement privacy controls by default |
-| `GDPR-006` | Data Breach Notification | Critical | Implement breach detection and notification |
-| `GDPR-007` | Data Processing Records | Medium | Maintain processing activity records |
-| `GDPR-008` | Cross-Border Transfers | High | Ensure adequate protection for transfers |
+---
 
-### SOC2 Security (`soc2.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `SOC2-001` | Access Controls | High | Implement proper access control mechanisms |
-| `SOC2-002` | System Monitoring | Medium | Continuous system monitoring required |
-| `SOC2-003` | Incident Response | High | Documented incident response procedures |
-| `SOC2-004` | Change Management | Medium | Formal change management processes |
-| `SOC2-005` | Risk Assessment | High | Regular risk assessments required |
-| `SOC2-006` | Vendor Management | Medium | Third-party vendor risk management |
-| `SOC2-007` | Data Classification | High | Classify and protect data appropriately |
-| `SOC2-008` | Backup and Recovery | Medium | Regular backups and recovery testing |
-| `SOC2-009` | Security Awareness | Low | Security awareness training programs |
-| `SOC2-010` | Security Monitoring | High | Ongoing security monitoring |
+## 📊 **Rule Categories Summary**
 
-### HITRUST Security (`hitrust.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `HITRUST-001` | PHI Protection | Critical | Protect Protected Health Information |
-| `HITRUST-002` | Access Management | High | Comprehensive access management controls |
-| `HITRUST-003` | Audit Controls | High | Comprehensive audit logging and monitoring |
-| `HITRUST-004` | Integrity Controls | High | Data integrity protection mechanisms |
-| `HITRUST-005` | Person Authentication | High | Strong user authentication requirements |
-| `HITRUST-006` | Transmission Security | High | Secure data transmission protocols |
-| `HITRUST-007` | Workforce Training | Medium | Healthcare-specific security training |
-| `HITRUST-008` | Contingency Planning | High | Business continuity and disaster recovery |
-| `HITRUST-009` | Risk Assessment | High | Healthcare-specific risk assessments |
-| `HITRUST-010` | Policy Management | Medium | Comprehensive policy documentation |
+| Category | Rules | Frameworks | Description |
+|----------|-------|------------|-------------|
+| **🏥 Healthcare-Specific** | 36 | HIPAA, HITRUST, FHIR, AWS HealthLake, Azure Health, Google Health | Healthcare industry compliance and interoperability |
+| **🌐 Global Compliance** | 32 | GDPR, SOC2, ISO 27001, PCI DSS | International compliance frameworks |
+| **🔒 Security & Infrastructure** | 32 | API Security, Authentication, Cloud Security, Data Governance, Encryption | Core security and infrastructure controls |
 
-### API Security (`api_security.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `API-001` | Authentication Required | Critical | All API endpoints must require authentication |
-| `API-002` | HTTPS Enforcement | High | All API communications must use HTTPS |
-| `API-003` | Rate Limiting | Medium | Implement API rate limiting controls |
-| `API-004` | Input Validation | High | Validate all API input parameters |
-| `API-005` | Output Sanitization | High | Sanitize all API output data |
-| `API-006` | Error Handling | Medium | Secure error handling and logging |
-| `API-007` | CORS Configuration | Medium | Proper Cross-Origin Resource Sharing |
-| `API-008` | API Versioning | Low | Implement API versioning strategy |
-| `API-009` | Documentation Security | Low | Secure API documentation practices |
-| `API-010` | Monitoring and Alerting | High | Comprehensive API monitoring |
+---
 
-### Data Governance (`data_governance.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `DATA-001` | Data Classification | High | Classify data by sensitivity level |
-| `DATA-002` | Data Retention | Medium | Implement data retention policies |
-| `DATA-003` | Data Encryption | Critical | Encrypt sensitive data at rest |
-| `DATA-004` | Data Backup | High | Regular automated data backups |
-| `DATA-005` | Data Access Controls | High | Implement role-based access controls |
-| `DATA-006` | Data Loss Prevention | High | Prevent unauthorized data exfiltration |
-| `DATA-007` | Data Quality | Medium | Ensure data accuracy and completeness |
-| `DATA-008` | Data Lineage | Low | Track data origin and transformations |
-| `DATA-009` | Data Privacy | Critical | Protect personal and health information |
-| `DATA-010` | Data Security | High | Ensure regulatory adherence |
+## 🏥 **Healthcare-Specific Rules (36 rules)**
 
-### Cloud Security (`cloud_security.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `CLOUD-001` | Cloud Access Controls | High | Implement cloud access management |
-| `CLOUD-002` | Network Security | High | Secure cloud network configurations |
-| `CLOUD-003` | Container Security | Medium | Secure container deployments |
-| `CLOUD-004` | Secrets Management | Critical | Secure cloud secrets and credentials |
-| `CLOUD-005` | Security Monitoring | High | Monitor cloud security continuously |
-| `CLOUD-006` | Data Residency | Medium | Ensure data residency requirements |
-| `CLOUD-007` | Multi-Factor Authentication | High | Require MFA for cloud access |
-| `CLOUD-008` | Logging and Monitoring | High | Comprehensive cloud logging |
-| `CLOUD-009` | Incident Response | Medium | Cloud-specific incident procedures |
-| `CLOUD-010` | Vendor Management | Medium | Cloud vendor risk assessment |
+### **Healthcare-Specific Compliance Rules (8 rules)**
 
-### Healthcare Specific (`healthcare_specific.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `HL7-001` | HL7 FHIR Security | High | Ensure HL7 FHIR standard security |
-| `HL7-002` | Medical Device Security | Critical | Secure medical device integrations |
-| `HL7-003` | Telemedicine Security | High | Secure telemedicine platform access |
-| `HL7-004` | EHR Integration | High | Secure Electronic Health Record access |
-| `HL7-005` | PHI Handling | Critical | Proper Protected Health Information handling |
-| `HL7-006` | Consent Management | High | Healthcare-specific consent mechanisms |
-| `HL7-007` | Breach Detection | Critical | Healthcare data breach detection |
-| `HL7-008` | Clinical Workflow Security | Medium | Secure clinical workflow processes |
-| `HL7-009` | Patient Data Access | High | Secure patient data access controls |
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **HL7-001** | HL7 FHIR API Compliance | FHIR API endpoints must follow HL7 FHIR R4 specification with proper resource validation |
+| **HL7-002** | FHIR Resource Validation | All FHIR resources must be validated against their respective profiles and schemas |
+| **HL7-003** | FHIR Audit Logging | Comprehensive audit logging for all FHIR resource access and modifications |
+| **HL7-004** | FHIR Security Headers | Proper security headers implementation for FHIR endpoints |
+| **HL7-005** | FHIR Error Handling | Standardized error responses following FHIR OperationOutcome specification |
+| **HL7-006** | FHIR Versioning | Proper API versioning and backward compatibility for FHIR endpoints |
+| **HL7-007** | FHIR Search Parameters | Validated search parameters with proper filtering and pagination |
+| **HL7-008** | FHIR Bundle Processing | Secure processing of FHIR bundles with transaction support |
 
-### Authentication Security (`authentication_security.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `AUTH-001` | Multi-Factor Authentication | High | Require MFA for all user accounts |
-| `AUTH-002` | Emergency Access | Critical | Secure emergency access procedures |
-| `AUTH-003` | Auto-Logoff | Medium | Implement automatic session termination |
-| `AUTH-004` | Person Authentication | High | Strong person/entity authentication |
-| `AUTH-005` | Session Management | High | Secure session management controls |
-| `AUTH-006` | Password Policy | Medium | Enforce strong password requirements |
-| `AUTH-007` | Single Sign-On | Low | Implement SSO where appropriate |
-| `AUTH-008` | Access Control Matrix | High | Maintain comprehensive access matrix |
+### **FHIR Compliance Rules (8 rules)**
 
-### Log Validation (`log_validation.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `LOG-001` | Log Format Validation | Medium | Ensure consistent log format standards |
-| `LOG-002` | PHI Redaction | Critical | Redact PHI from log entries |
-| `LOG-003` | FHIR Patient Access | High | Log FHIR patient data access |
-| `LOG-004` | Authentication Events | High | Log all authentication events |
-| `LOG-005` | Data Access Logging | Critical | Log all data access attempts |
-| `LOG-006` | Error and Exception Logging | Medium | Comprehensive error logging |
-| `LOG-007` | Session Management Logging | High | Log session management events |
-| `LOG-008` | API Rate Limiting Logs | Medium | Log API rate limiting events |
-| `LOG-009` | Data Breach Detection | Critical | Log patterns indicating breaches |
-| `LOG-010` | Security Audit Trail | High | Maintain security audit trails |
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **FHIR-001** | FHIR R4 Compliance | Ensure FHIR server implements R4 specification correctly |
+| **FHIR-002** | FHIR Resource Validation | Validate FHIR resources against profiles and schemas |
+| **FHIR-003** | FHIR Audit Logging | Comprehensive audit logging for FHIR operations |
+| **FHIR-004** | FHIR Security Implementation | Implement FHIR security requirements including SMART on FHIR |
+| **FHIR-005** | FHIR Error Handling | Proper error responses using OperationOutcome |
+| **FHIR-006** | FHIR Versioning Support | Support for FHIR versioning and history |
+| **FHIR-007** | FHIR Search Implementation | Implement FHIR search with proper parameters |
+| **FHIR-008** | FHIR Bundle Processing | Secure processing of FHIR bundles and transactions |
 
-### FHIR Compliance (`fhir_compliance.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `FHIR-001` | FHIR Resource Validation | Critical | FHIR resources must be valid according to FHIR specification |
-| `FHIR-002` | FHIR Version Compliance | High | FHIR API must use supported FHIR version (R4, R5) |
-| `FHIR-003` | FHIR Security Headers | High | FHIR API must include proper security headers |
-| `FHIR-004` | FHIR Authentication | Critical | FHIR API must implement proper authentication (OAuth2, SMART on FHIR) |
-| `FHIR-005` | FHIR Authorization Scopes | High | FHIR API must implement proper authorization scopes |
-| `FHIR-006` | FHIR Audit Logging | High | FHIR API must implement comprehensive audit logging |
-| `FHIR-007` | FHIR Data Encryption | Critical | FHIR data must be encrypted in transit and at rest |
-| `FHIR-008` | FHIR Rate Limiting | Medium | FHIR API must implement rate limiting to prevent abuse |
-| `FHIR-009` | FHIR CORS Configuration | Medium | FHIR API must have proper CORS configuration |
-| `FHIR-010` | FHIR Content-Type Validation | High | FHIR API must validate Content-Type headers |
-| `FHIR-011` | FHIR Error Handling | High | FHIR API must implement proper error handling with OperationOutcome |
-| `FHIR-012` | FHIR Search Parameters | Medium | FHIR API must implement proper search parameters |
-| `FHIR-013` | FHIR Bundle Validation | High | FHIR bundles must be properly validated |
-| `FHIR-014` | FHIR Metadata Endpoint | High | FHIR API must expose proper metadata endpoint |
-| `FHIR-015` | FHIR Conformance Statement | Medium | FHIR API must provide proper conformance statement |
+### **AWS HealthLake Rules (11 rules)**
 
-### ISO 27001 (`iso27001.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `ISO-001` | Information Security Management System | Critical | ISMS must be established, implemented, maintained, and continually improved |
-| `ISO-002` | Security Logging and Monitoring | Critical | Comprehensive security event logging and monitoring must be implemented |
-| `ISO-003` | Access Control Management | Critical | Access to information and information processing facilities must be controlled |
-| `ISO-004` | Information Classification and Handling | High | Information must be classified and handled according to its sensitivity |
-| `ISO-005` | Cryptographic Controls | High | Cryptographic controls must be used to protect information confidentiality and integrity |
-| `ISO-006` | Incident Management | High | Information security incidents must be managed effectively |
-| `ISO-007` | Business Continuity Management | High | Business continuity and disaster recovery must be planned and tested |
-| `ISO-008` | Risk Assessment and Treatment | Critical | Information security risks must be assessed and treated appropriately |
-| `ISO-009` | Security Awareness and Training | Medium | Security awareness and training must be provided to all personnel |
-| `ISO-010` | Physical and Environmental Security | High | Physical and environmental security controls must be implemented |
-| `ISO-011` | Network Security Management | High | Network security must be managed to protect information in transit |
-| `ISO-012` | System Acquisition and Development | High | Security requirements must be included in system acquisition and development |
-| `ISO-013` | Supplier Relationships | Medium | Information security requirements must be included in supplier agreements |
-| `ISO-014` | Compliance and Legal Requirements | Critical | Legal and regulatory compliance requirements must be met |
-| `ISO-015` | Information Security Incident Management | High | Information security incidents must be reported and managed |
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **HL-001** | CloudTrail Enabled (Multi-Region) | Ensure AWS CloudTrail is enabled and configured for multi-region to capture HealthLake API events |
+| **HL-002** | CloudTrail Data Events | Enable CloudTrail data events for HealthLake S3 buckets to track data access |
+| **HL-003** | S3 Bucket Encryption | Ensure HealthLake S3 buckets use KMS encryption for data at rest |
+| **HL-004** | S3 Bucket Versioning | Enable S3 bucket versioning for HealthLake data protection |
+| **HL-005** | S3 Bucket MFA Delete | Enable MFA delete protection for HealthLake S3 buckets |
+| **HL-006** | KMS Key Rotation | Enable automatic key rotation for HealthLake KMS keys |
+| **HL-007** | CloudWatch Logging | Enable CloudWatch logging for HealthLake operations |
+| **HL-008** | CloudWatch Log Retention | Configure appropriate log retention for HealthLake CloudWatch logs |
+| **HL-009** | API Gateway Access Logging | Enable access logging for HealthLake API Gateway |
+| **HL-010** | API Gateway Request Validation | Enable request validation for HealthLake API Gateway |
+| **HL-011** | HealthLake Data Export | Ensure HealthLake data export follows security best practices |
 
-### Log Access Control (`log_access.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `LA-001` | IAM Role-Based Log Access | Critical | Log access must be controlled through IAM roles with specific permissions |
-| `LA-002` | Principle of Least Privilege | Critical | Log access must follow principle of least privilege - minimum necessary permissions |
-| `LA-003` | Log Access Audit Trail | High | All log access must be audited and logged for compliance |
-| `LA-004` | Log Access Time Restrictions | High | Log access must have time-based restrictions for security |
-| `LA-005` | Log Access IP Restrictions | High | Log access must be restricted to authorized IP addresses |
-| `LA-006` | Log Access MFA Requirement | High | Log access must require multi-factor authentication |
-| `LA-007` | Log Access Session Management | Medium | Log access sessions must be properly managed with timeouts |
-| `LA-008` | Log Access Data Classification | High | Log access must be based on data classification levels |
-| `LA-009` | Log Access Justification | Medium | Log access must require business justification and approval |
-| `LA-010` | Log Access Monitoring | High | Log access must be continuously monitored for anomalies |
-| `LA-011` | Log Access Encryption | High | Log access must be encrypted in transit and at rest |
-| `LA-012` | Log Access Segregation | High | Log access must be segregated by function and responsibility |
+### **Azure Health Data Services Rules (12 rules)**
 
-### Log Integrity (`log_integrity.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `LI-001` | CloudTrail Log File Validation | Critical | CloudTrail log files must have validation enabled to detect tampering |
-| `LI-002` | WORM Storage Configuration | Critical | Log storage must use WORM (Write Once, Read Many) to prevent modification |
-| `LI-003` | Log Immutability Verification | High | Log files must be stored in immutable storage with verification |
-| `LI-004` | Log Hash Verification | High | Log files must have cryptographic hashes for integrity verification |
-| `LI-005` | Digital Signature Verification | High | Log files must be digitally signed for authenticity verification |
-| `LI-006` | Log Chain of Custody | High | Log files must maintain chain of custody documentation |
-| `LI-007` | Log Access Monitoring | High | All log access must be monitored and logged for audit purposes |
-| `LI-008` | Log Retention Immutability | Medium | Log retention policies must be immutable and cannot be modified |
-| `LI-009` | Log Backup Integrity | High | Log backups must maintain integrity and be tamper-evident |
-| `LI-010` | Log Timestamp Integrity | Medium | Log timestamps must be tamper-evident and synchronized |
-| `LI-011` | Log Encryption at Rest | High | Log files must be encrypted at rest with tamper-evident keys |
-| `LI-012` | Log Integrity Monitoring | High | Continuous monitoring of log integrity must be implemented |
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **AZ-HDS-001** | Activity Log Enabled | Ensure Azure Activity Log is enabled for Health Data Services |
+| **AZ-HDS-002** | Diagnostic Settings | Configure diagnostic settings for Health Data Services resources |
+| **AZ-HDS-003** | Storage Account Encryption | Ensure Health Data Services storage accounts use encryption |
+| **AZ-HDS-004** | Key Vault Access Policies | Configure proper access policies for Health Data Services Key Vault |
+| **AZ-HDS-005** | Key Vault Key Rotation | Enable automatic key rotation for Health Data Services keys |
+| **AZ-HDS-006** | Log Analytics Workspace | Configure Log Analytics workspace for Health Data Services |
+| **AZ-HDS-007** | Application Gateway Access Logging | Enable access logging for Health Data Services Application Gateway |
+| **AZ-HDS-008** | Application Gateway WAF | Enable Web Application Firewall for Health Data Services |
+| **AZ-HDS-009** | Network Security Groups | Configure Network Security Groups for Health Data Services |
+| **AZ-HDS-010** | Private Endpoint Configuration | Configure private endpoints for Health Data Services |
+| **AZ-HDS-011** | RBAC Configuration | Configure Role-Based Access Control for Health Data Services |
+| **AZ-HDS-012** | Private Endpoint Configuration | Ensure private endpoints are properly configured for Health Data Services |
 
-### PCI-DSS (`pci_dss.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `PCI-001` | Card Data Tokenization | Critical | Sensitive cardholder data must be tokenized or encrypted in API logs and responses |
-| `PCI-002` | No PAN in Logs | Critical | Primary Account Numbers (PANs) must not appear in application logs |
-| `PCI-003` | CVV/CVC Protection | Critical | Card Verification Values (CVV/CVC) must never be stored or logged |
-| `PCI-004` | Payment Access Monitoring | High | All payment-related API access must be logged with user identity and timestamp |
-| `PCI-005` | Payment Data Encryption | High | Payment data must be encrypted in transit and at rest |
-| `PCI-006` | Payment Gateway Integration Security | High | Payment gateway integrations must use secure authentication and API keys |
-| `PCI-007` | Payment Transaction Logging | High | Payment transactions must be logged with transaction ID and status |
-| `PCI-008` | Payment Failure Handling | Medium | Payment failures must be logged securely without exposing sensitive data |
-| `PCI-009` | Payment Data Retention | Medium | Payment data retention must comply with PCI-DSS requirements (max 1 year for transaction data) |
-| `PCI-010` | Payment API Rate Limiting | Medium | Payment APIs must implement rate limiting to prevent abuse |
-| `PCI-011` | Payment Webhook Security | High | Payment webhooks must be secured with signature verification |
-| `PCI-012` | Payment Data Access Controls | High | Payment data access must be restricted to authorized personnel only |
+### **Google Cloud Healthcare API Rules (13 rules)**
 
-### Encryption (`encryption.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `ENC-PRO-001` | End-to-End Encryption | Critical | All PHI data must be encrypted in transit and at rest |
-| `ENC-PRO-002` | Key Management | High | Encryption keys must be managed securely with rotation |
-| `ENC-PRO-003` | Algorithm Compliance | High | Only approved encryption algorithms must be used |
-| `ENC-PRO-004` | Database Encryption | High | Database must be encrypted at rest |
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **GCH-001** | Cloud Audit Logs Enabled | Ensure Cloud Audit Logs are enabled for Healthcare API |
+| **GCH-002** | Cloud Audit Logs Data Access Logging | Enable data access logging for Healthcare API operations |
+| **GCH-003** | Cloud Storage Encryption | Ensure Healthcare API Cloud Storage uses encryption |
+| **GCH-004** | Cloud KMS Key Management | Configure proper key management for Healthcare API |
+| **GCH-005** | Cloud KMS Key Rotation | Enable automatic key rotation for Healthcare API keys |
+| **GCH-006** | Cloud Logging Configuration | Configure Cloud Logging for Healthcare API |
+| **GCH-007** | Cloud Load Balancer Access Logging | Enable access logging for Healthcare API load balancer |
+| **GCH-008** | Cloud Load Balancer SSL Policy | Configure SSL policy for Healthcare API load balancer |
+| **GCH-009** | VPC Service Controls | Configure VPC Service Controls for Healthcare API |
+| **GCH-010** | IAM Policy Configuration | Configure IAM policies for Healthcare API access |
+| **GCH-011** | Healthcare API Dataset Configuration | Configure Healthcare API dataset with proper permissions |
+| **GCH-012** | VPC Service Controls Configuration | Ensure VPC Service Controls are properly configured |
+| **GCH-013** | Healthcare API FHIR Store Configuration | Configure FHIR store with proper security settings |
 
-### Data Redaction (`redaction.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `REDACT-PRO-001` | PHI Redaction | Critical | PHI data must be redacted in logs and non-production environments |
-| `REDACT-PRO-002` | Data Anonymization | High | Personal identifiers must be anonymized in analytics |
-| `REDACT-PRO-003` | Log Sanitization | High | Logs must be sanitized to remove sensitive data |
-| `REDACT-PRO-004` | Access Control | Medium | Redacted data access must be controlled and logged |
+---
 
-### HealthLake Logs (`healthlake_logs.yaml`)
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `HL-001` | CloudTrail Enabled (Multi-Region) | Critical | Ensure AWS CloudTrail is enabled and configured for multi-region to capture HealthLake API events |
-| `HL-002` | CloudTrail Management & Data Events Logging | High | CloudTrail should log management and data events (including Read/Write events) for HealthLake APIs |
-| `HL-003` | CloudTrail S3 Delivery Bucket Encryption | High | CloudTrail logs stored in S3 should be encrypted (SSE-S3 or SSE-KMS) |
-| `HL-004` | CloudTrail S3 Bucket Access Logging & Lockdown | High | S3 bucket used for CloudTrail should have access logging enabled and restrictive bucket policy to prevent public access |
-| `HL-005` | CloudTrail S3 Bucket KMS Key Rotation | Medium | KMS CMKs used to encrypt CloudTrail logs should have automatic rotation enabled where applicable |
-| `HL-006` | CloudWatch Logs Export / Aggregation for HealthLake | High | Ensure CloudWatch Logs for API Gateway / application logs are exported/aggregated and accessible for scan/reporting |
-| `HL-007` | API Gateway Access Logging (FHIR Requests) | High | API Gateway (or ALB) must emit access logs that include requestTime, requestId, userIdentity, httpMethod, resourcePath for FHIR API requests |
-| `HL-008` | FHIR Resource Pattern in Logs | Medium | Logged resource paths should follow FHIR resource patterns (e.g., /Patient/{id}, /Observation/{id}) |
-| `HL-009` | User Identity in Logs | High | Log entries for HealthLake API calls should include a user identity (IAM principal or Cognito identity) to support traceability |
-| `HL-010` | Log Retention Meets Minimum | High | Ensure audit logs (CloudTrail / CloudWatch) retention meets minimum policy (e.g., >= 365 days for HealthLake audit readiness) |
-| `HL-011` | IAM Role Usage in API Calls | High | Detect anonymous or console-root usage in HealthLake API calls; prefer least-privilege IAM roles for service-to-service calls |
+## 🌐 **Global Compliance Rules (32 rules)**
 
-## 🔌 Plugin Architecture
+### **GDPR Rules (8 rules)**
 
-BaaStream features a powerful plugin architecture that extends risk scanning to CI/CD pipelines and infrastructure as code.
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **GDPR-001** | Data Minimization | Implement data minimization principles to collect only necessary data |
+| **GDPR-002** | Consent Management | Implement comprehensive consent management with explicit consent tracking |
+| **GDPR-003** | Data Subject Rights | Implement data subject rights including access, rectification, and erasure |
+| **GDPR-004** | Data Protection by Design | Implement data protection by design and by default principles |
+| **GDPR-005** | Data Protection Officer | Appoint and maintain a Data Protection Officer (DPO) |
+| **GDPR-006** | Breach Notification | Implement data breach notification procedures within 72 hours |
+| **GDPR-007** | Data Processing Records | Maintain records of data processing activities |
+| **GDPR-008** | Privacy Impact Assessment | Conduct Privacy Impact Assessments for high-risk processing |
 
-### 🚀 CI/CD Plugins
+### **SOC2 Rules (10 rules)**
 
-### GitHub Actions Plugin (`github_actions`)
-- **Purpose**: Validate GitHub Actions workflows for healthcare security
-- **Rules**: 5 specialized rules for workflow security
-- **Capabilities**:
-  - Workflow validation
-  - Secret management
-  - Permission validation
-  - Artifact security
-  - Environment protection
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **SOC2-001** | Security Controls | Implement comprehensive security controls for system protection |
+| **SOC2-002** | Availability Controls | Ensure system availability and uptime monitoring |
+| **SOC2-003** | Processing Integrity | Implement controls to ensure processing integrity |
+| **SOC2-004** | Confidentiality Controls | Implement confidentiality controls for sensitive data |
+| **SOC2-005** | Privacy Controls | Implement privacy controls for personal information |
+| **SOC2-006** | Access Controls | Implement proper access controls and user management |
+| **SOC2-007** | Monitoring Controls | Implement continuous monitoring and alerting |
+| **SOC2-008** | Incident Response | Implement incident response procedures and capabilities |
+| **SOC2-009** | Change Management | Implement change management controls and procedures |
+| **SOC2-010** | Vendor Management | Implement vendor management controls and oversight |
 
-**GitHub Actions Rules:**
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `GHA-001` | Workflow Security Permissions | High | Workflows must use minimal required permissions |
-| `GHA-002` | Secret Management | Critical | Must use secrets for sensitive data |
-| `GHA-003` | Environment Protection | High | Production environments must have protection rules |
-| `GHA-004` | Artifact Security | Medium | Build artifacts must be properly secured |
-| `GHA-005` | Workflow Validation | Medium | Workflows must validate inputs and outputs |
+### **ISO 27001 Rules (12 rules)**
 
-### Jenkins Plugin (`jenkins`)
-- **Purpose**: Validate Jenkins pipelines for healthcare security
-- **Rules**: 5 specialized rules for pipeline security
-- **Capabilities**:
-  - Pipeline validation
-  - Credential management
-  - Node security
-  - Build artifacts
-  - Environment isolation
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **ISO-001** | Information Security Policy | Establish and maintain information security policies |
+| **ISO-002** | Organization of Information Security | Define roles and responsibilities for information security |
+| **ISO-003** | Human Resource Security | Implement security controls for human resources |
+| **ISO-004** | Asset Management | Implement asset management and classification |
+| **ISO-005** | Access Control | Implement comprehensive access control measures |
+| **ISO-006** | Cryptography | Implement cryptographic controls for data protection |
+| **ISO-007** | Physical and Environmental Security | Implement physical security controls |
+| **ISO-008** | Operations Security | Implement operational security controls |
+| **ISO-009** | Communications Security | Implement network and communications security |
+| **ISO-010** | System Acquisition and Development | Implement secure system development lifecycle |
+| **ISO-011** | Supplier Relationships | Implement supplier security management |
+| **ISO-012** | Information Security Incident Management | Implement incident management procedures |
 
-**Jenkins Rules:**
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `JENKINS-001` | Pipeline Security | High | Pipelines must use secure practices |
-| `JENKINS-002` | Credential Management | Critical | Must use credential store for sensitive data |
-| `JENKINS-003` | Node Security | High | Nodes must be properly secured |
-| `JENKINS-004` | Build Artifacts Security | Medium | Artifacts must be properly secured |
-| `JENKINS-005` | Environment Isolation | High | Environments must be properly isolated |
+### **PCI DSS Rules (6 rules)**
 
-### 🏗️ Infrastructure Plugins
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **PCI-001** | Secure Network and Systems | Implement secure network and systems architecture |
+| **PCI-002** | Cardholder Data Protection | Protect stored cardholder data with encryption |
+| **PCI-003** | Vulnerability Management | Implement vulnerability management program |
+| **PCI-004** | Access Control Measures | Implement strong access control measures |
+| **PCI-005** | Network Monitoring | Implement network monitoring and testing |
+| **PCI-006** | Information Security Policy | Maintain information security policy |
 
-### Terraform Plugin (`terraform`)
-- **Purpose**: Validate Terraform Infrastructure as Code for healthcare security
-- **Rules**: 5 specialized rules for infrastructure security
-- **Capabilities**:
-  - Resource validation
-  - State security
-  - Variable management
-  - Provider security
-  - Module validation
+---
 
-**Terraform Rules:**
-| Rule ID | Name | Severity | Description |
-|---------|------|----------|-------------|
-| `TF-001` | Resource Security Configuration | High | Resources must have proper security configs |
-| `TF-002` | State File Security | Critical | State files must be stored securely |
-| `TF-003` | Variable Security | High | Variables must not contain sensitive data |
-| `TF-004` | Provider Security | Medium | Providers must be properly configured |
-| `TF-005` | Module Validation | Medium | Modules must be properly versioned |
+## 🔒 **Security & Infrastructure Rules (32 rules)**
+
+### **API Security Rules (10 rules)**
+
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **API-001** | API Authentication | Strong API authentication prioritizing OAuth 2.0 with MFA for human-involved flows |
+| **API-002** | API Rate Limiting | Comprehensive API rate limiting with adaptive behavior and quota enforcement |
+| **API-003** | API Input Validation | Comprehensive input validation with sanitization and type checking |
+| **API-004** | API Output Sanitization | Comprehensive output sanitization to prevent data leakage |
+| **API-005** | API Error Handling | Secure error handling with proper logging and user feedback |
+| **API-006** | API CORS Configuration | Proper CORS configuration for cross-origin resource sharing |
+| **API-007** | API Versioning | Proper API versioning with backward compatibility |
+| **API-008** | API Documentation | Comprehensive API documentation with security requirements |
+| **API-009** | API Monitoring | Comprehensive API monitoring with performance and security metrics |
+| **API-010** | API Dependency Management | Secure dependency management with vulnerability scanning |
+
+### **Authentication Security Rules (8 rules)**
+
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **AUTH-001** | Multi-Factor Authentication Validation | All healthcare API access must require phishing-resistant MFA with adaptive risk-based prompts |
+| **AUTH-002** | Emergency Access Procedures | Emergency access to healthcare systems must be properly logged, monitored, and include post-access review |
+| **AUTH-003** | Automatic Logoff Detection | Healthcare systems must implement adaptive session timeout with pre-logoff warnings |
+| **AUTH-004** | Person/Entity Authentication Patterns | Implement distinct authentication patterns for person and entity access with device attestation |
+| **AUTH-005** | Session Management Security | Implement secure session management with encryption, concurrent session limits, and token revocation |
+| **AUTH-006** | Password Policy Enforcement | Implement modern password policies focusing on length and MFA with passwordless alternatives |
+| **AUTH-007** | Single Sign-On Integration | Implement secure SSO integration with proper token validation and revocation capabilities |
+| **AUTH-008** | Access Control Matrix | Implement comprehensive access control matrix with role-based permissions and ABAC |
+
+### **Cloud Security Rules (10 rules)**
+
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **CLOUD-001** | Cloud Access Controls | Implement comprehensive cloud access controls and identity management |
+| **CLOUD-002** | Network Security | Implement network security controls including VPCs, subnets, and security groups |
+| **CLOUD-003** | Container Security | Implement container security controls including image scanning and runtime protection |
+| **CLOUD-004** | Secrets Management | Implement secure secrets management with encryption and rotation |
+| **CLOUD-005** | Security Monitoring | Implement comprehensive security monitoring and alerting |
+| **CLOUD-006** | Data Residency | Ensure data residency compliance with geographic restrictions |
+| **CLOUD-007** | Multi-Factor Authentication | Implement MFA for all cloud service access |
+| **CLOUD-008** | Logging and Monitoring | Implement comprehensive logging and monitoring for cloud resources |
+| **CLOUD-009** | Incident Response | Implement cloud-specific incident response procedures |
+| **CLOUD-010** | Vendor Management | Implement vendor management controls for cloud services |
+
+### **Data Governance Rules (10 rules)**
+
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **DATA-001** | Data Classification | Implement comprehensive data classification and labeling |
+| **DATA-002** | Data Retention | Implement data retention policies with automated lifecycle management |
+| **DATA-003** | Data Quality | Implement data quality controls and validation |
+| **DATA-004** | Data Lineage | Implement data lineage tracking and documentation |
+| **DATA-005** | Data Privacy | Implement privacy controls and data protection measures |
+| **DATA-006** | Data Security | Implement data security controls and encryption |
+| **DATA-007** | Data Compliance | Implement compliance monitoring and reporting |
+| **DATA-008** | Data Audit | Implement data audit trails and logging |
+| **DATA-009** | Data Governance Policy | Establish and maintain data governance policies |
+| **DATA-010** | Data Access Controls | Implement data access controls and permissions |
+
+### **Encryption Rules (4 rules)**
+
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **ENC-001** | End-to-End Encryption | Implement end-to-end encryption for data in transit |
+| **ENC-002** | Key Management | Implement secure key management with rotation and escrow |
+| **ENC-003** | Algorithm Compliance | Use approved encryption algorithms and key lengths |
+| **ENC-004** | Encryption at Rest | Implement encryption at rest for all sensitive data |
+
+---
+
+## 📝 **Additional Rule Categories**
+
+### **Audit Logs Rules**
+
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **AUDIT-001** | Audit Logging Enabled | Ensure comprehensive audit logging is enabled for all system activities |
+| **AUDIT-002** | Log Retention | Configure appropriate log retention periods for compliance requirements |
+| **AUDIT-003** | Log Integrity | Implement log integrity protection and tamper detection |
+| **AUDIT-004** | Log Access Control | Implement proper access controls for audit logs |
+
+### **Log Access Rules**
+
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **LOG-001** | Log Access Control | Implement proper access controls for log data |
+| **LOG-002** | Log Monitoring | Implement log monitoring and alerting |
+| **LOG-003** | Log Analysis | Implement log analysis and correlation |
+| **LOG-004** | Log Storage Security | Implement secure log storage and archival |
+
+### **Log Integrity Rules**
+
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **INTEGRITY-001** | Log Tamper Detection | Implement log tamper detection and prevention |
+| **INTEGRITY-002** | Log Signing | Implement digital signing for log entries |
+| **INTEGRITY-003** | Log Chain of Custody | Implement chain of custody for log data |
+| **INTEGRITY-004** | Log Validation | Implement log validation and verification |
+
+### **Log Validation Rules**
+
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **VALID-001** | Log Format Validation | Validate log format and structure |
+| **VALID-002** | Log Content Validation | Validate log content and data integrity |
+| **VALID-003** | Log Schema Validation | Validate log schema and metadata |
+| **VALID-004** | Log Timestamp Validation | Validate log timestamps and sequencing |
+
+### **Redaction Rules**
+
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **REDACT-001** | PHI Redaction | Implement PHI redaction in logs and data |
+| **REDACT-002** | Data Anonymization | Implement data anonymization techniques |
+| **REDACT-003** | Log Sanitization | Implement log sanitization and filtering |
+| **REDACT-004** | Access Control Redaction | Implement access control redaction |
+
+### **Unstructured Logs Rules**
+
+| Rule ID | Name | Description |
+|---------|------|-------------|
+| **UNSTRUCT-001** | Unstructured Log Parsing | Implement parsing for unstructured log formats |
+| **UNSTRUCT-002** | Log Format Detection | Implement automatic log format detection |
+| **UNSTRUCT-003** | Log Normalization | Implement log normalization and standardization |
+| **UNSTRUCT-004** | Log Enrichment | Implement log enrichment and correlation |
+
+---
+
+## 🎯 **Rule Severity Levels**
+
+| Severity | Description | Impact |
+|----------|-------------|---------|
+| **Critical** | Immediate compliance violation | High risk of regulatory penalties |
+| **High** | Significant compliance gap | Moderate risk of regulatory issues |
+| **Medium** | Minor compliance issue | Low risk but should be addressed |
+| **Low** | Best practice recommendation | Improvement opportunity |
+
+---
+
+## 🏷️ **Rule Tags**
+
+Rules are tagged with relevant categories for easy filtering and organization:
+
+- **Framework Tags**: `hipaa`, `hitrust`, `gdpr`, `soc2`, `iso27001`, `pci_dss`, `fhir`
+- **Platform Tags**: `aws`, `azure`, `google`, `cloud`
+- **Category Tags**: `security`, `authentication`, `encryption`, `logging`, `compliance`
+- **Type Tags**: `api`, `data`, `network`, `access`, `monitoring`
+
+---
+
+## 🚀 **Usage Examples**
+
+### **Test Specific Framework**
+```bash
+go run cmd/scan/main.go cmd/scan/output.go \
+  -rules rules \
+  -tags "hipaa" \
+  your_data.json
+```
+
+### **Test Multiple Frameworks**
+```bash
+go run cmd/scan/main.go cmd/scan/output.go \
+  -rules rules \
+  -tags "hipaa,gdpr,soc2" \
+  your_data.json
+```
+
+### **Test Specific Rule Category**
+```bash
+go run cmd/scan/main.go cmd/scan/output.go \
+  -rules rules/api_security.yaml \
+  your_data.json
+```
+
+### **Test Cloud Platform**
+```bash
+go run cmd/scan/main.go cmd/scan/output.go \
+  -rules rules \
+  -tags "aws" \
+  your_data.json
+```
+
+---
+
+## 🔄 **Rule Updates**
+
+Rules are regularly updated to reflect:
+- New compliance requirements
+- Updated best practices
+- Security threat landscape changes
+- Framework specification updates
+
+For the latest rule updates, check the `rules/` directory and rule file headers for version information.
+
+---
+
+**Total Rules**: 203 rules across 15+ compliance frameworks  
+**Last Updated**: September 2025 
+**Version**: 1.0.0
