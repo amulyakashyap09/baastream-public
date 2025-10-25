@@ -8,7 +8,7 @@ BaaStream helps engineering and security teams identify potential technical risk
 
 ⚠️ **IMPORTANT DISCLAIMER**: This tool does NOT provide legal advice or guarantee regulatory adherence. It only scans infrastructure configurations and log patterns for potential technical risks. Full regulatory adherence requires comprehensive legal, technical, and operational measures beyond this tool's scope. Always consult with legal experts and regulatory counsel for actual requirements.
 
-**Read More about Legal Disclaimer**: [LEGAL_DISCLAIMER.md](./LEGAL_DISCLAIMER.md)
+**Read More about Legal Disclaimer**: [LEGAL_DISCLAIMER.md](./legal.md)
 
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/amulyakashyap09/baastream-public)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
