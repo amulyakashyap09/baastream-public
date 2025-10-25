@@ -112,6 +112,17 @@ Refer to `rules/*.yaml` for full details.
 
 ---
 
+🚀 Key Features
+🔍 Rule Engine: 150+ rules for infrastructure and log pattern validation across HIPAA, GDPR, SOC2, HITRUST, ISO 27001, FHIR, PCI-DSS, and security best practices
+🔌 Plugin Architecture: Extensible CI/CD and infrastructure integrations
+📊 Multiple Output Formats: JSON, CSV, PDF, and human-readable summaries
+🎯 Targeted Scanning: Scan specific rules by ID or category
+📝 Log Analysis: Advanced log pattern validation for potential technical risks
+🏗️ Infrastructure Scanning: Terraform, GitHub Actions, and Jenkins support
+⚡ Developer-First: CLI tool with CI/CD integration
+
+---
+
 ## 📊 Infrastructure & Log Scanning Coverage
 
 | Framework | Rules | Scope | Key Areas |
@@ -256,3 +267,7 @@ BaaStream — catch issues early, prove compliance faster, and protect patient t
 5) Generate desired output format; optionally compute analytics and trends.
 6) Validate auth and plan; if eligible, upload results to the dashboard.
 7) Return appropriate exit code for CI/CD gating.
+
+## Contact For Demo
+- **Contact Us**: support@baastream.com
+- **Website**: https://baastream.com
