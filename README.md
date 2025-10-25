@@ -1,12 +1,33 @@
-# BaaStream — Healthcare API Risk & Compliance Scanner
+# BaaStream ⚕️ — Healthcare API Risk & Compliance Scanner
 
-Transform reactive compliance into proactive risk prevention. BaaStream continuously scans your APIs, infrastructure-as-code and logs against healthcare-grade controls (HIPAA, HITRUST, SOC 2, ISO 27001, GDPR, FHIR, PCI-DSS) to catch issues before they become costly incidents or failed audits.
+Transform reactive compliance into proactive risk prevention. BaaStream continuously scans your APIs, infrastructure-as-code, and logs against healthcare-grade controls (HIPAA, HITRUST, SOC 2, ISO 27001, GDPR, FHIR, PCI-DSS) to catch issues before they become costly incidents or failed audits.
 
-> Legal note: BaaStream identifies technical risks and control gaps. It does not provide legal advice or guarantee compliance outcomes.
+> Legal note: BaaStream identifies technical risks and control gaps. It does not provide legal advice or guarantee compliance outcomes. More information read: www.baastream.com/legal
 
 ---
 
-## Executive Summary
+## 🧭 Table of Contents
+- Executive Summary
+- What BaaStream Does
+- Why BaaStream
+- Business Outcomes & Savings
+- Key Features
+- How It Works
+- Integrations
+- Security & Privacy
+- Compliance Coverage (Selected)
+- 📊 Infrastructure & Log Scanning Coverage
+- Implementation & Timeline
+- Pricing & Plans
+- Case Studies
+- Competitive Landscape
+- Buyer FAQ
+- Next Steps
+- Contact
+
+---
+
+## 💼 Executive Summary
 - Reduce breach and audit failure risk with automated scanning and clear remediation.
 - Shorten audits from weeks to days with evidence-ready reporting (JSON, CSV, PDF, summaries).
 - Integrate in hours, not months: CLI-first, CI/CD plugins, and dashboard upload-ready.
@@ -14,9 +35,9 @@ Transform reactive compliance into proactive risk prevention. BaaStream continuo
 
 ---
 
-## What BaaStream Does
+## 🧰 What BaaStream Does
 - Scans infrastructure configs, CI/CD workflows, and logs for misconfigurations, missing controls, and PHI/PII exposure risks.
-- Maps findings to frameworks (HIPAA, HITRUST, SOC 2, ISO 27001, GDPR, FHIR, PCI-DSS) with remediation.
+- Maps findings to frameworks (HIPAA, HITRUST, SOC 2, ISO 27001, GDPR, FHIR, PCI-DSS) with remediation guidance.
 - Generates executive-friendly reports and engineering-ready action lists.
 - Extensible via plugins (GitHub Actions, Jenkins, Terraform) and custom rules.
 
@@ -24,7 +45,7 @@ Who it’s for: CTO/CISO/VP Eng at healthtech, payors/providers, digital health,
 
 ---
 
-## Business Outcomes & Savings
+## 💰 Business Outcomes & Savings
 
 ### The cost of not knowing
 - HIPAA breach penalties and settlement costs: $4.2M average major event
@@ -55,7 +76,7 @@ Conservative outcome for a mid-size org: $1.0M–$3.0M avoided costs/year. For s
 
 ---
 
-## Why BaaStream (Differentiators)
+## ✨ Why BaaStream (Differentiators)
 - Healthcare-grade rules out of the box: HIPAA, HITRUST, FHIR, PCI-DSS (in addition to SOC 2/ISO/GDPR)
 - Deep log validation: PHI redaction checks, FHIR access patterns, audit trail completeness
 - CI/CD and IaC coverage: GitHub Actions, Jenkins, Terraform
@@ -63,11 +84,11 @@ Conservative outcome for a mid-size org: $1.0M–$3.0M avoided costs/year. For s
 - Extensible rules and plugins; easy custom rules for your environment
 - Developer-first CLI with dashboard upload capability
 
-See `README.md` for the complete rule catalog and examples.
+See `docs/README.md` for the complete rule catalog and examples.
 
 ---
 
-## What’s Included (at a glance)
+## 📦 What’s Included (at a glance)
 - 150+ rules across HIPAA, HITRUST, SOC 2, ISO 27001, GDPR, FHIR, PCI-DSS, API Security, Cloud Security, Log Access/Integrity, Data Governance, Encryption, Redaction
 - Plugins: GitHub Actions, Jenkins, Terraform (more planned)
 - Formats: JSON, CSV, PDF, human-readable summaries
@@ -76,32 +97,32 @@ See `README.md` for the complete rule catalog and examples.
 
 ---
 
-## How It Works
+## ⚙️ How It Works
 1) Point BaaStream at your config/logs/IaC
-2) Select rule sets (e.g., HIPAA+SOC 2+PCI) and severity filters
+2) Select rule sets (e.g., HIPAA + SOC 2 + PCI) and severity filters
 3) Run locally or in CI/CD; optionally upload results to the dashboard
 4) Get prioritized findings, remediation, and framework mapping
 
 ---
 
-## Integrations
+## 🔌 Integrations
 - CI/CD: GitHub Actions, Jenkins (pipeline checks, secrets, permissions)
 - IaC: Terraform (resource, state, variable, provider security)
 - Cloud/Healthcare APIs: AWS HealthLake, Azure Health Data Services, Google Cloud Healthcare API (log requirements, identity, retention, private connectivity)
 
 ---
 
-## Security & Privacy
+## 🔒 Security & Privacy
 - No production traffic interception; scan artifacts you choose (configs, logs)
 - PHI/PII redaction checks and secure handling guidance
 - Evidence export for auditors without exposing sensitive data (CSV/PDF with selective fields)
 - Supports least-privilege operational models
 
-Note: Always review outputs before sharing with external parties. See `LEGAL_DISCLAIMER.md`.
+Note: Always review outputs before sharing with external parties. See `docs/legal.md`.
 
 ---
 
-## Compliance Coverage (Selected)
+## 📜 Compliance Coverage (Selected)
 - HIPAA/HITRUST: audit logging, access controls, transmission security, PHI handling
 - SOC 2/ISO 27001: logging/monitoring, change management, backups, business continuity
 - GDPR: data minimization, breach detection, consent, cross-border controls
@@ -112,8 +133,8 @@ Refer to `rules/*.yaml` for full details.
 
 ---
 
-🚀 Key Features
-🔍 Rule Engine: 150+ rules for infrastructure and log pattern validation across HIPAA, GDPR, SOC2, HITRUST, ISO 27001, FHIR, PCI-DSS, and security best practices
+## 🚀 Key Features
+🔍 Rule Engine: 150+ rules for infrastructure and log pattern validation across HIPAA, GDPR, SOC 2, HITRUST, ISO 27001, FHIR, PCI-DSS, and security best practices
 🔌 Plugin Architecture: Extensible CI/CD and infrastructure integrations
 📊 Multiple Output Formats: JSON, CSV, PDF, and human-readable summaries
 🎯 Targeted Scanning: Scan specific rules by ID or category
@@ -129,7 +150,7 @@ Refer to `rules/*.yaml` for full details.
 |-----------|-------|-------|-----------|
 | **HIPAA** | 8 rules | Infrastructure & Logs | PHI protection patterns, access control configs, audit logging patterns |
 | **GDPR** | 8 rules | Infrastructure & Logs | Data minimization configs, consent patterns, breach detection logs |
-| **SOC2** | 10 rules | Infrastructure & Logs | Access control configs, monitoring setup, incident response logs |
+| **SOC 2** | 10 rules | Infrastructure & Logs | Access control configs, monitoring setup, incident response logs |
 | **HITRUST** | 10 rules | Infrastructure & Logs | PHI protection configs, authentication setup, transmission security |
 | **ISO 27001** | 15 rules | Infrastructure & Logs | ISMS governance, security controls, risk management, compliance |
 | **FHIR** | 15 rules | Infrastructure & Logs | FHIR resource validation, authentication, encryption, audit logging |
@@ -140,7 +161,7 @@ Refer to `rules/*.yaml` for full details.
 | **Log Access Control** | 12 rules | Infrastructure & Logs | IAM roles, least privilege, access monitoring, time restrictions |
 | **Log Integrity** | 12 rules | Infrastructure & Logs | WORM storage, hash verification, digital signatures, tamper detection |
 | **HealthLake** | 11 rules | Infrastructure & Logs | CloudTrail configuration, FHIR logging, user identity, retention policies |
-| **Google Healthcare** | 13 rules | Infrastructure & Logs | Cloud Audit Logs, KMS encryption, VPC Service Controls, FHIR patterns |
+| **Google Cloud Healthcare** | 13 rules | Infrastructure & Logs | Cloud Audit Logs, KMS encryption, VPC Service Controls, FHIR patterns |
 | **Azure Health Data Services** | 12 rules | Infrastructure & Logs | Activity Logs, Diagnostic Settings, Private Endpoints, Managed Identity |
 | **Authentication Security** | 8 rules | Infrastructure & Logs | Multi-factor auth, session management, identity verification patterns |
 | **Audit Logs** | 7 rules | Infrastructure & Logs | Comprehensive audit logging, event capture, compliance reporting |
@@ -152,7 +173,7 @@ Refer to `rules/*.yaml` for full details.
 
 ---
 
-## Implementation & Timeline
+## ⏱️ Implementation & Timeline
 - Time-to-value: 30–90 minutes for initial CLI scans; 0.5–1 day for CI/CD rollout
 - Typical steps:
   - Build CLI and run first scans on sample data (`examples/`)
@@ -163,21 +184,21 @@ Refer to `rules/*.yaml` for full details.
 
 ---
 
-## Pricing & Plans
-Tiered subscriptions from Community (free) to Healthcare Enterprise, covering users, scans, plugins, analytics, and support SLAs. See pricing tables in `README.md`.
+## 💳 Pricing & Plans
+Tiered subscriptions from Community (free) to Healthcare Enterprise, covering users, scans, plugins, analytics, and support SLAs. For current pricing, visit [baastream.com](https://baastream.com) or contact us.
 
 For procurement or volume licensing, contact `support@baastream.com`.
 
 ---
 
-## Case Studies (Illustrative)
+## 🏥 Case Studies (Illustrative)
 - Healthcare startup (50 employees): avoided SOC 2 remediation delay; saved ~$450K and 6 months
 - Mid-size health system: early PHI exposure detection; saved ~$2.7M and avoided sanctions
 - API platform (200 employees): PCI checks maintained enterprise deals; saved ~$1.1M
 
 ---
 
-## Competitive Landscape (High-Level)
+## 🆚 Competitive Landscape (High-Level)
 | Option | Pros | Cons |
 | --- | --- | --- |
 | Generic open-source scanners | Free; basic checks | Limited healthcare depth; no audit-ready outputs |
@@ -188,7 +209,7 @@ BaaStream often runs alongside your SIEM and GRC to close the technical control 
 
 ---
 
-## Buyer FAQ
+## ❓ Buyer FAQ
 - How fast can we start? Same day—use examples, then point to your configs/logs.
 - Will this slow down engineering? No; targeted checks and CI/CD gating keep velocity high.
 - Do auditors accept BaaStream reports? Yes—CSV/PDF summaries map to controls and ease sampling.
@@ -197,9 +218,9 @@ BaaStream often runs alongside your SIEM and GRC to close the technical control 
 
 ---
 
-## Next Steps
-1) Review `README.md` → rule catalog and examples
-2) Try local scan: see `USAGE.md`
+## ➡️ Next Steps
+1) Review `docs/README.md` → rule catalog and examples
+2) Try a local scan: see `USAGE.md`
 3) Add CI/CD checks via plugins: see `plugins/README.md`
 4) Talk to us for a tailored ROI model: `support@baastream.com`
 
@@ -207,7 +228,7 @@ BaaStream — catch issues early, prove compliance faster, and protect patient t
 
 ---
 
-## End-to-End Workflow (How It Works Under the Hood)
+## 🧪 End-to-End Workflow (Under the Hood)
 
 - **1) CLI parses inputs and flags**
   - Reads flags like `-rules`, `-format`, `-severity`, `-tags`, `-type`, `-log-format`, `-custom-rules`, `-historical`, `-login`, `-setup-dashboard`, etc.
@@ -268,6 +289,6 @@ BaaStream — catch issues early, prove compliance faster, and protect patient t
 6) Validate auth and plan; if eligible, upload results to the dashboard.
 7) Return appropriate exit code for CI/CD gating.
 
-## Contact For Demo
+## 📞 Contact
 - **Contact Us**: support@baastream.com
-- **Website**: https://baastream.com
+- **Website**: [baastream.com](https://baastream.com)
