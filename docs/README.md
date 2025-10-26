@@ -39,12 +39,44 @@ Who it’s for: CTO/CISO/VP Eng at healthtech, payors/providers, digital health,
 - PHI/PII redaction and logging validation → reduce exposure and breach scope
 
 ### Illustrative annual savings
-| Category | Without BaaStream | With BaaStream | Estimated Savings |
-| --- | --- | --- | --- |
-| HIPAA breach exposure | $4.2M average | Early detection, redaction, logging | $3.8M+ |
-| SOC 2 remediation | $2.1M | Proactive control checks | $1.9M+ |
-| Misconfig incidents | $2.4M | Automated validation | $2.2M+ |
-| Logging/audit gaps | $1.8M | Complete audit trail | $1.6M+ |
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Without BaaStream</th>
+      <th>With BaaStream</th>
+      <th>Estimated Savings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HIPAA breach exposure</td>
+      <td>$4.2M average</td>
+      <td>Early detection, redaction, logging</td>
+      <td>$3.8M+</td>
+    </tr>
+    <tr>
+      <td>SOC 2 remediation</td>
+      <td>$2.1M</td>
+      <td>Proactive control checks</td>
+      <td>$1.9M+</td>
+    </tr>
+    <tr>
+      <td>Misconfig incidents</td>
+      <td>$2.4M</td>
+      <td>Automated validation</td>
+      <td>$2.2M+</td>
+    </tr>
+    <tr>
+      <td>Logging/audit gaps</td>
+      <td>$1.8M</td>
+      <td>Complete audit trail</td>
+      <td>$1.6M+</td>
+    </tr>
+  </tbody>
+  
+</table>
 
 Conservative outcome for a mid-size org: $1.0M–$3.0M avoided costs/year. For startups: faster enterprise sales and reduced audit lift.
 
@@ -77,10 +109,10 @@ See `docs/README.md` in the repository root for the complete rule catalog and ex
 ---
 
 ## ⚙️ How It Works
-1) Point BaaStream at your config/logs/IaC
-2) Select rule sets (e.g., HIPAA + SOC 2 + PCI) and severity filters
-3) Run locally or in CI/CD; optionally upload results to the dashboard
-4) Get prioritized findings, remediation, and framework mapping
+1. Point BaaStream at your config/logs/IaC
+2. Select rule sets (e.g., HIPAA + SOC 2 + PCI) and severity filters
+3. Run locally or in CI/CD; optionally upload results to the dashboard
+4. Get prioritized findings, remediation, and framework mapping
 
 ---
 
@@ -113,13 +145,14 @@ Refer to `rules/*.yaml` for full details.
 ---
 
 ## 🚀 Key Features
-🔍 Rule Engine: 150+ rules for infrastructure and log pattern validation across HIPAA, GDPR, SOC 2, HITRUST, ISO 27001, FHIR, PCI-DSS, and security best practices
-🔌 Plugin Architecture: Extensible CI/CD and infrastructure integrations
-📊 Multiple Output Formats: JSON, CSV, PDF, and human-readable summaries
-🎯 Targeted Scanning: Scan specific rules by ID or category
-📝 Log Analysis: Advanced log pattern validation for potential technical risks
-🏗️ Infrastructure Scanning: Terraform, GitHub Actions, and Jenkins support
-⚡ Developer-First: CLI tool with CI/CD integration
+
+- 🔍 Rule Engine: 150+ rules for infrastructure and log pattern validation across HIPAA, GDPR, SOC 2, HITRUST, ISO 27001, FHIR, PCI-DSS, and security best practices
+- 🔌 Plugin Architecture: Extensible CI/CD and infrastructure integrations
+- 📊 Multiple Output Formats: JSON, CSV, PDF, and human-readable summaries
+- 🎯 Targeted Scanning: Scan specific rules by ID or category
+- 📝 Log Analysis: Advanced log pattern validation for potential technical risks
+- 🏗️ Infrastructure Scanning: Terraform, GitHub Actions, and Jenkins support
+- ⚡ Developer-First: CLI tool with CI/CD integration
 
 ---
 
@@ -188,20 +221,11 @@ BaaStream often runs alongside your SIEM and GRC to close the technical control 
 
 ---
 
-## ❓ Buyer FAQ
-- How fast can we start? Same day—use examples, then point to your configs/logs.
-- Will this slow down engineering? No; targeted checks and CI/CD gating keep velocity high.
-- Do auditors accept BaaStream reports? Yes—CSV/PDF summaries map to controls and ease sampling.
-- Can we add our own controls? Yes—custom rules and tags are supported.
-- Data residency? Scans run where you choose; report uploads are optional.
-
----
-
 ## ➡️ Next Steps
-1) Review the root `README.md` → rule catalog and examples
-2) Try local scan: see `USAGE.md`
-3) Add CI/CD checks via plugins: see `plugins/README.md`
-4) Talk to us for a tailored ROI model: `support@baastream.com`
+- Review the root `README.md` → rule catalog and examples
+- Try local scan: see `USAGE.md`
+- Add CI/CD checks via plugins: see `plugins/README.md`
+- Talk to us for a tailored ROI model: `support@baastream.com`
 
 BaaStream — catch issues early, prove compliance faster, and protect patient trust.
 
