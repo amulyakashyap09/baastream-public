@@ -1,0 +1,20 @@
+{
+    "current_endpoint": "https://baastream-prod.cloudfunctions.net",
+    "endpoints": {
+      "verify_token": "https://baastream-prod.cloudfunctions.net/api/v1/auth/verify-cli-token",
+      "upload_scan": "https://baastream-prod.cloudfunctions.net/api/v1/scans"
+    },
+    "fallback_endpoints": [],
+    "deprecated_endpoints": [],
+    "sunset_date": null,
+    "migration_guide": "",
+    "min_cli_version": "0.1.0",
+    "latest_cli_version": "0.1.0",
+    "update_required": false,
+    "metadata": {
+      "last_updated": "2025-12-20T00:00:00Z",
+      "version": "1.0",
+      "documentation": "https://docs.baastream.com/api",
+      "note": "Replace baastream-prod with your actual Firebase project ID"
+    }
+  }
