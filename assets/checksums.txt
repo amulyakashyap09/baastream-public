@@ -1,0 +1,6 @@
+179fc14621f4140bae7775c8d5a02b4b065bf08a9b827a40eaaa07158ea42f2c  baastream-scan-0.0.1-darwin-amd64.tar.gz
+68c2e6f6bae9a64bef2a7c3d7bfaa218e858544c1ba2eaf0fbbd9b8de70ea4d4  baastream-scan-0.0.1-darwin-arm64.tar.gz
+667d5c64876cbca41dcc513340725560a3ad83725dafde5939780381d8691032  baastream-scan-0.0.1-linux-amd64.tar.gz
+2f279ea13614a8a7ec0c2a55c0c2e10babd8cbe130bfd751746ea19d00912c1a  baastream-scan-0.0.1-linux-arm64.tar.gz
+c35a0852edc3342252855e45ba64384fa91ef2f28d8563998bc5ecbfb4d0afba  baastream-scan-0.0.1-windows-amd64.zip
+784809bb6b25e210c464cba7ca22c1bce591dcffd9a6b0b64fa68ab19c16f70f  baastream-scan-0.0.1-windows-arm64.zip
